@@ -20,7 +20,7 @@
             <xsl:if test="price &gt; 10">
              &#128994;
             </xsl:if>
-            <xsl:if test="(price &lt; 10)">
+            <xsl:if test="price &lt; 10">
               &#128308;
             </xsl:if>
           </td>
