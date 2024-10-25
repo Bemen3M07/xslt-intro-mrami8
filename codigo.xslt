@@ -26,20 +26,7 @@
       <td><xsl:apply-templates select="price" mode="indicator"/></td>
     </tr>
   </xsl:template>
-
-  <xsl:template match="title">
-    <xsl:value-of select="."/>
-  </xsl:template>
-
-  <xsl:template match="artist">
-    <xsl:value-of select="."/>
-  </xsl:template>
-
-  <xsl:template match="price">
-    <xsl:value-of select="."/>
-  </xsl:template>
-
-  <!-- Template para el indicador según el precio -->
+  
   <xsl:template match="price" mode="indicator">
     <xsl:choose>
       <xsl:when test=". &gt; 10">
