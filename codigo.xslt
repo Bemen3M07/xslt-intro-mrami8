@@ -1,37 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-  <xsl:template match="/">
-    <html> 
-    <body>
+<xsl:template match="/">
+<html> 
+  <body>
     <h2>My CD Collection</h2>
     <table border="1">
       <tr bgcolor="red">
-      <th style="text-align:left">Title</th>
-      <th style="text-align:left">Artist</th>
-      <th style="text-align:left">Price</th>
-      <th style="text-align:left">Indicator</th>
-    </tr>
+        <th style="text-align:left">Title</th>
+        <th style="text-align:left">Artist</th>
+        <th style="text-align:left">Price</th>
+        <th style="text-align:left">Indicator</th>
+      </tr>
       <xsl:for-each select="catalog/cd">
         <tr>
-        <td><xsl:value-of select="title"/></td>
-        <td><xsl:value-of select="artist"/></td>
-        <td><xsl:value-of select="price"/></td>
-        <td>
-        <xsl:choose>
-        <xsl:when test="price &gt; 10">
-        <span style="">&#128994;</span>
-        </xsl:when>
-        <xsl:otherwise>
-        <span style="">&#128308;</span>
-        </xsl:otherwise>
-        </xsl:choose>
-        </td>
+          <td><xsl:value-of select="title"/></td>
+          <td><xsl:value-of select="artist"/></td>
+          <td><xsl:value-of select="price"/></td>
+          <td>
+            <xsl:if test="price &gt; 10">
+              <span>&#128994;</span>
+            </xsl:if>
+            <xsl:if test="not(price &gt; 10)">
+              <span>&#128308;</span>
+            </xsl:if>
+          </td>
         </tr>
       </xsl:for-each>
     </table>
-    </body>
-    </html>
-  </xsl:template>
+  </body>
+</html>
+</xsl:template>
 </xsl:stylesheet>
-
-
