@@ -19,7 +19,7 @@
         <td>
         <xsl:choose>
         <xsl:when test="price &gt; 10">
-        <span style="color:green;">●</span>
+        <span style="color:green;">&#128994;</span>
         </xsl:when>
         <xsl:otherwise>
         <span style="color:red;">●</span>
