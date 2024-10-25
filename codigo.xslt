@@ -10,7 +10,7 @@
       <th style="text-align:left">Artist</th>
     </tr>
     <xsl:for-each select="catalog/price">
-    <xsl:sort select="price<10>"/>
+    <xsl:sort select= &lt; = 10/>
     <tr>
       <td><xsl:value-of select="title"/></td>
       <td><xsl:value-of select="artist"/></td>
