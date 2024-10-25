@@ -29,10 +29,10 @@
   
   <xsl:template match="price" mode="indicator">
     <xsl:choose>
-      <xsl:if test=". &gt; 10">
+      <xsl:if test="&gt;10">
         &#128994;
       </xsl:when>
-      <xsl:if test="&lt; 10">
+      <xsl:if test="&lt;10">
         &#128308;
       </xsl:otherwise>
     </xsl:choose>
