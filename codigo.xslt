@@ -18,10 +18,10 @@
           <td><xsl:value-of select="price"/></td>
           <td>
             <xsl:if test="price &gt; 10">
-              <span>&#128994;</span>
+             &#128994;
             </xsl:if>
             <xsl:if test="not(price &gt; 10)">
-              <span>&#128308;</span>
+              &#128308;
             </xsl:if>
           </td>
         </tr>
